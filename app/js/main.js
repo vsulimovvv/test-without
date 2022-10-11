@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // * ===== Mask input
   $('input[type="tel"]').mask('+7 (999) 999-99-99');
   $('#dob').mask('99/99/9999');
-  // $('select').niceSelect();
+  $('select').niceSelect();
 
   // * ===== file upload
   // (function loadForm() {
