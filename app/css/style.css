@@ -460,6 +460,16 @@ button:hover {
   -o-filter: grayscale(1);
 }
 
+.vanilla-calendar-header {
+  max-width: calc(100% - 20px) !important;
+}
+
+.vanilla-calendar-arrow_prev {
+  -webkit-transform: rotateZ(180deg) translateX(-20px);
+      -ms-transform: rotate(180deg) translateX(-20px);
+          transform: rotateZ(180deg) translateX(-20px);
+}
+
 @-webkit-keyframes opacity-visibility {
   0% {
     opacity: 0;
@@ -2679,10 +2689,6 @@ button:hover {
   content: "";
   width: 35px;
   height: 35px;
-  background-image: url("../images/content/cursor.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
   top: 20px;
   right: 20px;
   -webkit-transition: 300ms ease;

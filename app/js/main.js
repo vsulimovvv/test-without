@@ -158,6 +158,33 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   })();
 
+  // * Vanilla Calendar
+  (function calendar() {
+    const calendar = new VanillaCalendar('#calendar', {
+      settings: {
+        lang: 'ru',
+        selection: {
+          // day: 'multiple',
+        },
+      },
+    });
+
+    calendar.init();
+  })();
+
+  function showCalendarModal() {
+    const days = document.querySelectorAll('.vanilla-calendar-day');
+    const popup = document.querySelector('.calendar__popup');
+
+    days.forEach((day) => {
+      day.addEventListener('click', (e) => {
+        popup.classList.add('active');
+      });
+    });
+  }
+
+  showCalendarModal();
+
   // * ===== Show Menu
   // (function showFilters() {
   //   const filtersBtn = document.querySelector('.header-profile__btn-filter');
