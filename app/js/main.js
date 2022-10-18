@@ -209,14 +209,17 @@ window.addEventListener('DOMContentLoaded', () => {
     const valueItems = document.querySelectorAll('.values__item');
     const popup = document.querySelector('.popup--value');
     let popupTitle = popup.querySelector('.popup__title');
+    let popupText = popup.querySelector('.popup__text p');
     let popupImg = popup.querySelector('.popup__img');
 
     valueItems.forEach((item) => {
       if (item) {
         item.addEventListener('click', (e) => {
           const valueText = item.textContent;
+          const ftext = item.getAttribute('data-ftext');
           const img = item.querySelector('.values__img').src;
           popupTitle.textContent = valueText;
+          popupText.textContent = ftext;
           popupImg.setAttribute('src', img);
           popupImg.setAttribute('alt', valueText);
         });
@@ -224,7 +227,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // modalNeed();
+  modalNeed();
 
   // * ===== Modal
   (function modals() {

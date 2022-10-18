@@ -48,51 +48,85 @@
   </head>
 
   <body>
-    <div class="popup popup--online-booking">
+    <div class="popup popup--enter">
   <div class="popup__container">
-    <button class="popup__close" type="button" aria-label="Закрыть">
-      <svg width="15" height="15">
-        <use xlink:href="img/sprite.svg#close"></use>
-      </svg>
-    </button>
+    <button class="popup__close" type="button" aria-label="Закрыть"></button>
     <div class="popup__wrapper">
-      <h2 class="popup__title">Онлайн запись</h2>
-      <div class="popup__text">
-        <p>Оставьте ваши данные и мы вам перезвоним.</p>
-      </div>
+      <h2 class="popup__title">В одном шаге от вступления в клуб</h2>
 
       <form class="form-submit">
         <div class="form-submit__group">
-          <label class="form-submit__label" for="online-name">Имя</label>
-
+          <label class="form-submit__label" for="name">Имя</label>
           <input
             class="form-submit__input"
-            name="name"
-            id="online-name"
             type="text"
-            placeholder="Введите ваше имя"
-            required
+            placeholder="Иван Иванов"
+            id="name"
           />
+          <span class="form-submit__line"></span>
         </div>
         <div class="form-submit__group">
-          <label class="form-submit__label" for="online-tel">
-            Контактный телефон
-          </label>
-
+          <label class="form-submit__label" for="phone">Телефон</label>
           <input
             class="form-submit__input"
-            name="tel"
-            id="online-tel"
             type="tel"
-            placeholder="+7 (___) ___-__-__"
-            required
+            placeholder="+7 (xxx) xxx - xx - xx"
+            id="phone"
           />
+          <span class="form-submit__line"></span>
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="niche">Ниша</label>
+          <input
+            class="form-submit__input"
+            type="text"
+            placeholder="Например, строительство"
+            id="niche"
+          />
+          <span class="form-submit__line"></span>
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="income">Уровень дохода</label>
+          <select class="form-submit__select" id="income">
+            <option value="">Выберите из списка</option>
+            <option value="1">до 300 тысяч</option>
+            <option value="2">от 300 до 1 миллиона</option>
+            <option value="3">более 1 миллиона</option>
+          </select>
+          <span class="form-submit__line"></span>
         </div>
 
-        <button class="form-submit__btn btn" type="button">
-          Заказать звонок
-        </button>
+        <div class="form-submit__bottom">
+          <button class="form-submit__btn btn" type="submit">
+            Отправить заявку
+          </button>
+          <div class="form-submit__agree">
+            Отправляя заявку, Вы соглашаетесь на
+            <a href="#">обработку персональных данных</a>
+          </div>
+        </div>
       </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--value">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть"></button>
+    <div class="popup__wrapper">
+      <img
+        class="popup__img"
+        src="images/content/values/1.png"
+        alt="Системность"
+      />
+      <h2 class="popup__title">Системность</h2>
+      <div class="popup__text">
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s,
+        </p>
+      </div>
     </div>
   </div>
 </div>
@@ -105,7 +139,7 @@
   <div class="mobile-menu">
     <div class="mobile-menu__top">
       <a class="mobile-menu__logo" href="#">
-        <img src="img/logo-menu.png" alt="Логотип" />
+        <img src="images/logo-menu.png" alt="Логотип" />
       </a>
 
       <button
@@ -114,7 +148,7 @@
         aria-label="Закрыть меню"
       >
         <svg width="19" height="19">
-          <use xlink:href="img/sprite.svg#close"></use>
+          <use xlink:href="images/sprite.svg#close"></use>
         </svg>
       </button>
     </div>
@@ -188,7 +222,7 @@
   <div class="container">
     <nav class="header__wrapper">
       <a class="header__logo logo" href="index.html">
-        <img src="img/logo.png" alt="Логотип" />
+        <img src="images/logo.png" alt="Логотип" />
         <span>бизнес — клуб для предпринимателей</span>
       </a>
 
@@ -272,7 +306,7 @@
           <li class="directions__slide swiper-slide">
             <div class="directions__top">
               <img
-                src="img/directions-slider/1.jpg"
+                src="images/content/directions-slider/1.jpg"
                 alt="directions"
               />
               <button class="directions__btn btn" type="button">
@@ -284,26 +318,36 @@
               <div class="directions__inner">
                 <div class="directions__left">
                   <h2 class="directions__title">
-                    Системный нетворкинг + наставничество
+                    <span>
+                      Бизнес разборы от ТОП предпринимателей клуба СистемА
+                    </span>
                   </h2>
 
                   <a class="directions__more btn" href="#">Подробнее</a>
                 </div>
-                <ul class="directions__list">
-                  <li class="directions__item">
-                    • 2 раза в месяц по четвергам
-                  </li>
-                  <li class="directions__item">
-                    • Основная задача – обучить эффективному нетворкингу и
-                    заложить основу системности в бизнесе, чтобы быстро выйти на
-                    уровень чистого дохода 300000+ рублей в месяц.
-                  </li>
-                  <li class="directions__item">
-                    • Наставники клуба с доходом 300000+ наблюдают за работой в
-                    группах и отбирают лучших, чтобы довести новичков до своего
-                    уровня быстро и без ошибок.
-                  </li>
-                </ul>
+                <div class="directions__right">
+                  <p>
+                    <strong>В программе:</strong>
+                  </p>
+                  <ul>
+                    <li>Разборы бизнесов 4х участников по 30 мин. каждый</li>
+                    <li>
+                      Разбор касается как показателей бизнеса так и мышления,
+                      ограничивающих убеждений и т.д.
+                    </li>
+                    <li>
+                      В итоге каждого разбора участник получает четкий план —
+                      как увеличить свой доход
+                    </li>
+                    <li>Далее организованный нетворкинг всех участников</li>
+                  </ul>
+
+                  <p><strong>Беcплатно!</strong></p>
+                  <p>Каждую среду в 18:00</p>
+                  <p>
+                    Место: Открытый мир, Павловская 18. 4ый этаж, аудитория 417
+                  </p>
+                </div>
 
                 <a
                   class="directions__more directions__more--mobile btn"
@@ -316,7 +360,7 @@
           <li class="directions__slide swiper-slide">
             <div class="directions__top">
               <img
-                src="img/directions-slider/2.jpg"
+                src="images/content/directions-slider/2.jpg"
                 alt="directions"
               />
               <button class="directions__btn btn" type="button">
@@ -328,26 +372,184 @@
               <div class="directions__inner">
                 <div class="directions__left">
                   <h2 class="directions__title">
-                    Системный нетворкинг + наставничество
+                    <span>Школа Бизнеса</span>
                   </h2>
 
                   <a class="directions__more btn" href="#">Подробнее</a>
                 </div>
-                <ul class="directions__list">
-                  <li class="directions__item">
-                    • 2 раза в месяц по четвергам
-                  </li>
-                  <li class="directions__item">
-                    • Основная задача – обучить эффективному нетворкингу и
-                    заложить основу системности в бизнесе, чтобы быстро выйти на
-                    уровень чистого дохода 300000+ рублей в месяц.
-                  </li>
-                  <li class="directions__item">
-                    • Наставники клуба с доходом 300000+ наблюдают за работой в
-                    группах и отбирают лучших, чтобы довести новичков до своего
-                    уровня быстро и без ошибок.
-                  </li>
-                </ul>
+                <div class="directions__right">
+                  <p>
+                    Еженедельные занятия по четвергам с 18.00-21.00, на которых
+                    основатель клуба Азат Шигаев и главные менторы клуба обучают
+                    резидентов построению системного и управляемого бизнеса, а
+                    так же личной эффективности. Только опыт — никакой воды.
+                  </p>
+                  <p>
+                    Половина занятия теоретическая часть, вторая половина
+                    практика в группах.
+                  </p>
+                  <p>
+                    <strong>Затрагиваются все основные сферы бизнеса:</strong>
+                  </p>
+                  <ul class="grid">
+                    <li>Поиск ниши и болей рынка</li>
+                    <li>Найм команды</li>
+                    <li>Маркетинг</li>
+                    <li>Продажи</li>
+                    <li>Производство</li>
+                    <li>Финансы</li>
+                    <li>PR</li>
+                    <li>Юридические вопросы</li>
+                  </ul>
+                  <p>
+                    Одно занятие в месяц называется Приглашенный гость. На нем
+                    мы приглашаем крупных и в идеале непубличных
+                    предпринимателей, которые рассказывают свою историю бизнеса
+                    и отвечают на множество вопросов наших резидентов.
+                  </p>
+                  <p>
+                    Еще одно занятие в месяц — глубокие бизнес разборы
+                    резидентов от основателя клуба.
+                  </p>
+                </div>
+
+                <a
+                  class="directions__more directions__more--mobile btn"
+                  href="#"
+                  >Подробнее</a
+                >
+              </div>
+            </div>
+          </li>
+          <li class="directions__slide swiper-slide">
+            <div class="directions__top">
+              <img
+                src="images/content/directions-slider/3.jpg"
+                alt="directions"
+              />
+              <button class="directions__btn btn" type="button">
+                Для новичков клуба
+              </button>
+            </div>
+
+            <div class="container">
+              <div class="directions__inner">
+                <div class="directions__left">
+                  <h2 class="directions__title">
+                    <span>Форум-группы</span>
+                  </h2>
+
+                  <a class="directions__more btn" href="#">Подробнее</a>
+                </div>
+                <div class="directions__right">
+                  <p>1 ежемесячная встреча группой из 10 резидентов клуба.</p>
+                  <p>
+                    На встрече обсуждаются вопросы личного характера, здоровья,
+                    отношений с окружающими и бизнес-вопросы.
+                  </p>
+                  <p>
+                    Обсуждается только личный опыт участников группы в строго
+                    конфиденциальной атмосфере. Такой подход позволяет каждому
+                    участнику делиться действительно больными вопросами и
+                    получать мощную поддержку от группы в виде обратной связи,
+                    опыта и конкретных рекомендаций что делать в сложной
+                    ситуации.
+                  </p>
+                  <p>Один из любимых форматов наших резидентов 🙂</p>
+                </div>
+
+                <a
+                  class="directions__more directions__more--mobile btn"
+                  href="#"
+                  >Подробнее</a
+                >
+              </div>
+            </div>
+          </li>
+          <li class="directions__slide swiper-slide">
+            <div class="directions__top">
+              <img
+                src="images/content/directions-slider/4.jpg"
+                alt="directions"
+              />
+              <button class="directions__btn btn" type="button">
+                Для новичков клуба
+              </button>
+            </div>
+
+            <div class="container">
+              <div class="directions__inner">
+                <div class="directions__left">
+                  <h2 class="directions__title">
+                    <span>Выездные мероприятия</span>
+                  </h2>
+
+                  <a class="directions__more btn" href="#">Подробнее</a>
+                </div>
+                <div class="directions__right">
+                  <p>
+                    Раз в 1-2 месяца клуб устраивает выездные мероприятия с
+                    развлекательной программой и бизнес обучением. Программа
+                    формируется совместно с резидентами клуба и базируется на
+                    наших ценностях.
+                  </p>
+                  <p>
+                    Обычно выезд 2-ух дневный с ночевкой, чтобы успеть
+                    переключится с привычных задач, отдохнуть и попробовать для
+                    себя что-то новенькое.
+                  </p>
+                  <p>
+                    <strong
+                      >Любимые активности из предыдущих мероприятий:</strong
+                    >
+                  </p>
+                  <p>
+                    Йога, стояние на гвоздях, хождение по углям, медитации,
+                    катание на сап-бодах, лошадях, мотоциклах, багги и т.п.
+                    Футбол, волейбол, баскетбол и многое другое.
+                  </p>
+                  <p>
+                    И конечно мы любим вкусно покушать и повеселиться до
+                    рассвета 🙂
+                  </p>
+                </div>
+
+                <a
+                  class="directions__more directions__more--mobile btn"
+                  href="#"
+                  >Подробнее</a
+                >
+              </div>
+            </div>
+          </li>
+          <li class="directions__slide swiper-slide">
+            <div class="directions__top">
+              <img
+                src="images/content/directions-slider/5.jpg"
+                alt="directions"
+              />
+              <button class="directions__btn btn" type="button">
+                Для новичков клуба
+              </button>
+            </div>
+
+            <div class="container">
+              <div class="directions__inner">
+                <div class="directions__left">
+                  <h2 class="directions__title">
+                    <span>Бизнес-баня</span>
+                  </h2>
+
+                  <a class="directions__more btn" href="#">Подробнее</a>
+                </div>
+                <div class="directions__right">
+                  <p>
+                    В клубе много любителей качественного парения в русской
+                    баньке — 1 раз в 2-3 недели мы собираемся чтобы попариться и
+                    в душевной обстановке обсудить насущные вопросы бизнеса.
+                  </p>
+                  <p>Баня всегда трезвая — мы за здоровый образ жизни 🙂</p>
+                </div>
 
                 <a
                   class="directions__more directions__more--mobile btn"
@@ -383,7 +585,7 @@
             <li class="mentors__slide swiper-slide">
               <article class="mentors-card">
                 <a class="mentors-card__top" href="#">
-                  <img src="img/mentors/1.jpg" alt="ментор" />
+                  <img src="images/content/mentors/1.jpg" alt="ментор" />
                 </a>
 
                 <div class="mentors-card__body">
@@ -395,7 +597,7 @@
                     <li class="mentors-card-item">
                       <div class="mentors-card-item__top">
                         <img
-                          src="img/gear.png"
+                          src="images/content/gear.png"
                           alt="gear"
                           width="20"
                           height="20"
@@ -412,7 +614,7 @@
                     <li class="mentors-card-item">
                       <div class="mentors-card-item__top">
                         <img
-                          src="img/wallet.png"
+                          src="images/content/wallet.png"
                           alt="gear"
                           width="20"
                           height="20"
@@ -420,13 +622,13 @@
                         <span>Годовой оборот</span>
                       </div>
                       <div class="mentors-card-item__text">
-                        <p>1,5 миллиардов рублей</p>
+                        <p>1,5 млрд</p>
                       </div>
                     </li>
                     <li class="mentors-card-item">
                       <div class="mentors-card-item__top">
                         <img
-                          src="img/employee.png"
+                          src="images/content/employee.png"
                           alt="gear"
                           width="20"
                           height="20"
@@ -440,7 +642,7 @@
                     <li class="mentors-card-item">
                       <div class="mentors-card-item__top">
                         <img
-                          src="img/puzzle.png"
+                          src="images/content/puzzle.png"
                           alt="gear"
                           width="20"
                           height="20"
@@ -480,7 +682,7 @@
             <li class="mentors__slide swiper-slide">
               <article class="mentors-card">
                 <a class="mentors-card__top" href="#">
-                  <img src="img/mentors/2.jpg" alt="ментор" />
+                  <img src="images/content/mentors/2.jpg" alt="ментор" />
                 </a>
 
                 <div class="mentors-card__body">
@@ -492,7 +694,7 @@
                     <li class="mentors-card-item">
                       <div class="mentors-card-item__top">
                         <img
-                          src="img/gear.png"
+                          src="images/content/gear.png"
                           alt="gear"
                           width="20"
                           height="20"
@@ -510,7 +712,7 @@
                     <li class="mentors-card-item">
                       <div class="mentors-card-item__top">
                         <img
-                          src="img/wallet.png"
+                          src="images/content/wallet.png"
                           alt="gear"
                           width="20"
                           height="20"
@@ -518,13 +720,13 @@
                         <span>Годовой оборот</span>
                       </div>
                       <div class="mentors-card-item__text">
-                        <p>0,5 - 0,7 миллиардов рублей в год</p>
+                        <p>0,7</p>
                       </div>
                     </li>
                     <li class="mentors-card-item">
                       <div class="mentors-card-item__top">
                         <img
-                          src="img/employee.png"
+                          src="images/content/employee.png"
                           alt="gear"
                           width="20"
                           height="20"
@@ -532,13 +734,13 @@
                         <span>Количество сотрудников</span>
                       </div>
                       <div class="mentors-card-item__text">
-                        <p>Блее 150</p>
+                        <p>Блее 100</p>
                       </div>
                     </li>
                     <li class="mentors-card-item">
                       <div class="mentors-card-item__top">
                         <img
-                          src="img/puzzle.png"
+                          src="images/content/puzzle.png"
                           alt="gear"
                           width="20"
                           height="20"
@@ -579,19 +781,19 @@
             <li class="mentors__slide swiper-slide">
               <article class="mentors-card">
                 <a class="mentors-card__top" href="#">
-                  <img src="img/mentors/3.jpg" alt="ментор" />
+                  <img src="images/content/mentors/3.jpg" alt="ментор" />
                 </a>
 
                 <div class="mentors-card__body">
                   <h3 class="mentors-card__title">
-                    <a class="card-link" href="#">Иван Кудин</a>
+                    <a class="card-link" href="#">Денис Сорокин</a>
                   </h3>
 
                   <ul class="mentors-card__list">
                     <li class="mentors-card-item">
                       <div class="mentors-card-item__top">
                         <img
-                          src="img/gear.png"
+                          src="images/content/gear.png"
                           alt="gear"
                           width="20"
                           height="20"
@@ -600,18 +802,15 @@
                       </div>
                       <div class="mentors-card-item__text">
                         <p>
-                          Директор по развитию бизнес клуба СистемА. В прошлом
-                          Основатель проекта для предпринимателей Школа
-                          Здоровья. Более 1500 предпринимателей прошедших через
-                          программу, 80% из них вышло на уровень дохода 300000+
-                          чистыми в месяц
+                          e-commerce, разработка и продажа продуктов для
+                          продуктивности
                         </p>
                       </div>
                     </li>
                     <li class="mentors-card-item">
                       <div class="mentors-card-item__top">
                         <img
-                          src="img/wallet.png"
+                          src="images/content/wallet.png"
                           alt="gear"
                           width="20"
                           height="20"
@@ -619,13 +818,13 @@
                         <span>Годовой оборот</span>
                       </div>
                       <div class="mentors-card-item__text">
-                        <p>0,5 - 0,7 миллиардов рублей в год</p>
+                        <p>50+ млн. руб.</p>
                       </div>
                     </li>
                     <li class="mentors-card-item">
                       <div class="mentors-card-item__top">
                         <img
-                          src="img/employee.png"
+                          src="images/content/employee.png"
                           alt="gear"
                           width="20"
                           height="20"
@@ -633,13 +832,13 @@
                         <span>Количество сотрудников</span>
                       </div>
                       <div class="mentors-card-item__text">
-                        <p>Блее 150</p>
+                        <p>21</p>
                       </div>
                     </li>
                     <li class="mentors-card-item">
                       <div class="mentors-card-item__top">
                         <img
-                          src="img/puzzle.png"
+                          src="images/content/puzzle.png"
                           alt="gear"
                           width="20"
                           height="20"
@@ -648,9 +847,8 @@
                       </div>
                       <div class="mentors-card-item__text">
                         <p>
-                          Научный подход к развитию человека в целом и
-                          предпринимателя в частности, выезды на природу,
-                          системный бег для здоровья.
+                          Изучаю тему счастья во всех его проявлениях,
+                          экстремальные виды спорта, наставничество в бизнесе.
                         </p>
                       </div>
                     </li>
@@ -671,300 +869,6 @@
                       </p>
                     </div>
                   </div>
-                  <a class="mentors-card__btn btn" href="#">Подробнее</a>
-                </div>
-              </article>
-            </li>
-            <li class="mentors__slide swiper-slide">
-              <article class="mentors-card">
-                <a class="mentors-card__top" href="#">
-                  <img src="img/mentors/1.jpg" alt="ментор" />
-                </a>
-
-                <div class="mentors-card__body">
-                  <h3 class="mentors-card__title">
-                    <a class="card-link" href="#">Азат Шигаев</a>
-                  </h3>
-
-                  <ul class="mentors-card__list">
-                    <li class="mentors-card-item">
-                      <div class="mentors-card-item__top">
-                        <img
-                          src="img/gear.png"
-                          alt="gear"
-                          width="20"
-                          height="20"
-                        />
-                        <span>Основные виды деятельности:</span>
-                      </div>
-                      <div class="mentors-card-item__text">
-                        <p>
-                          Переработка мусора, бурение спец-установками,
-                          квест-комнаты, коммерческая недвижимость.
-                        </p>
-                      </div>
-                    </li>
-                    <li class="mentors-card-item">
-                      <div class="mentors-card-item__top">
-                        <img
-                          src="img/wallet.png"
-                          alt="gear"
-                          width="20"
-                          height="20"
-                        />
-                        <span>Годовой оборот</span>
-                      </div>
-                      <div class="mentors-card-item__text">
-                        <p>1,5 миллиардов рублей</p>
-                      </div>
-                    </li>
-                    <li class="mentors-card-item">
-                      <div class="mentors-card-item__top">
-                        <img
-                          src="img/employee.png"
-                          alt="gear"
-                          width="20"
-                          height="20"
-                        />
-                        <span>Количество сотрудников</span>
-                      </div>
-                      <div class="mentors-card-item__text">
-                        <p>Блее 200.</p>
-                      </div>
-                    </li>
-                    <li class="mentors-card-item">
-                      <div class="mentors-card-item__top">
-                        <img
-                          src="img/puzzle.png"
-                          alt="gear"
-                          width="20"
-                          height="20"
-                        />
-                        <span>Увлечения</span>
-                      </div>
-                      <div class="mentors-card-item__text">
-                        <p>
-                          Развитие предпринимателей, публичные выступления,
-                          здоровый образ жизни, системность во всех сферах.
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                  <div class="mentors-card__mobile">
-                    <div class="mentors-card__mobile-text">
-                      <p>
-                        <span class="block">Основные виды деятельности:</span>
-                        Переработка мусора, бурение спец-установками,
-                        квест-комнаты, коммерческая недвижимость.
-                      </p>
-                      <p><span>Годовой оборот:</span> 1,5 млрд. руб.</p>
-                      <p><span>Количество сотрудников:</span>200+.</p>
-                      <p>
-                        <span> Увлечения: </span>Развитие предпринимателей,
-                        публичные выступления, здоровый образ жизни, системность
-                        во всех сферах.
-                      </p>
-                    </div>
-                  </div>
-                  <a class="mentors-card__btn btn" href="#">Подробнее</a>
-                </div>
-              </article>
-            </li>
-            <li class="mentors__slide swiper-slide">
-              <article class="mentors-card">
-                <a class="mentors-card__top" href="#">
-                  <img src="img/mentors/2.jpg" alt="ментор" />
-                </a>
-
-                <div class="mentors-card__body">
-                  <h3 class="mentors-card__title">
-                    <a class="card-link" href="#">Алексей Заборовских</a>
-                  </h3>
-
-                  <ul class="mentors-card__list">
-                    <li class="mentors-card-item">
-                      <div class="mentors-card-item__top">
-                        <img
-                          src="img/gear.png"
-                          alt="gear"
-                          width="20"
-                          height="20"
-                        />
-                        <span>Основные виды деятельности:</span>
-                      </div>
-                      <div class="mentors-card-item__text">
-                        <p>
-                          cтроительство по госконтрактам, обслуживание
-                          инженерных сетей, гостиницы, пищевое производство,
-                          ТБО.
-                        </p>
-                      </div>
-                    </li>
-                    <li class="mentors-card-item">
-                      <div class="mentors-card-item__top">
-                        <img
-                          src="img/wallet.png"
-                          alt="gear"
-                          width="20"
-                          height="20"
-                        />
-                        <span>Годовой оборот</span>
-                      </div>
-                      <div class="mentors-card-item__text">
-                        <p>0,5 - 0,7 миллиардов рублей в год</p>
-                      </div>
-                    </li>
-                    <li class="mentors-card-item">
-                      <div class="mentors-card-item__top">
-                        <img
-                          src="img/employee.png"
-                          alt="gear"
-                          width="20"
-                          height="20"
-                        />
-                        <span>Количество сотрудников</span>
-                      </div>
-                      <div class="mentors-card-item__text">
-                        <p>Блее 150</p>
-                      </div>
-                    </li>
-                    <li class="mentors-card-item">
-                      <div class="mentors-card-item__top">
-                        <img
-                          src="img/puzzle.png"
-                          alt="gear"
-                          width="20"
-                          height="20"
-                        />
-                        <span>Увлечения</span>
-                      </div>
-                      <div class="mentors-card-item__text">
-                        <p>
-                          туризм по самым удаленным уголкам земного шара и
-                          горнолыжка. Увлекаюсь идеями радикального продления
-                          жизни, биохакинга и исследованием пространства за
-                          пределами человеческой жизни.
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                  <div class="mentors-card__mobile">
-                    <div class="mentors-card__mobile-text">
-                      <p>
-                        <span class="block">Основные виды деятельности:</span>
-                        Переработка мусора, бурение спец-установками,
-                        квест-комнаты, коммерческая недвижимость.
-                      </p>
-                      <p><span>Годовой оборот:</span> 1,5 млрд. руб.</p>
-                      <p><span>Количество сотрудников:</span>200+.</p>
-                      <p>
-                        <span> Увлечения: </span>Развитие предпринимателей,
-                        публичные выступления, здоровый образ жизни, системность
-                        во всех сферах.
-                      </p>
-                    </div>
-                  </div>
-
-                  <a class="mentors-card__btn btn" href="#">Подробнее</a>
-                </div>
-              </article>
-            </li>
-            <li class="mentors__slide swiper-slide">
-              <article class="mentors-card">
-                <a class="mentors-card__top" href="#">
-                  <img src="img/mentors/3.jpg" alt="ментор" />
-                </a>
-
-                <div class="mentors-card__body">
-                  <h3 class="mentors-card__title">
-                    <a class="card-link" href="#">Иван Кудин</a>
-                  </h3>
-
-                  <ul class="mentors-card__list">
-                    <li class="mentors-card-item">
-                      <div class="mentors-card-item__top">
-                        <img
-                          src="img/gear.png"
-                          alt="gear"
-                          width="20"
-                          height="20"
-                        />
-                        <span>Основные виды деятельности:</span>
-                      </div>
-                      <div class="mentors-card-item__text">
-                        <p>
-                          Директор по развитию бизнес клуба СистемА. В прошлом
-                          Основатель проекта для предпринимателей Школа
-                          Здоровья. Более 1500 предпринимателей прошедших через
-                          программу, 80% из них вышло на уровень дохода 300000+
-                          чистыми в месяц
-                        </p>
-                      </div>
-                    </li>
-                    <li class="mentors-card-item">
-                      <div class="mentors-card-item__top">
-                        <img
-                          src="img/wallet.png"
-                          alt="gear"
-                          width="20"
-                          height="20"
-                        />
-                        <span>Годовой оборот</span>
-                      </div>
-                      <div class="mentors-card-item__text">
-                        <p>0,5 - 0,7 миллиардов рублей в год</p>
-                      </div>
-                    </li>
-                    <li class="mentors-card-item">
-                      <div class="mentors-card-item__top">
-                        <img
-                          src="img/employee.png"
-                          alt="gear"
-                          width="20"
-                          height="20"
-                        />
-                        <span>Количество сотрудников</span>
-                      </div>
-                      <div class="mentors-card-item__text">
-                        <p>Блее 150</p>
-                      </div>
-                    </li>
-                    <li class="mentors-card-item">
-                      <div class="mentors-card-item__top">
-                        <img
-                          src="img/puzzle.png"
-                          alt="gear"
-                          width="20"
-                          height="20"
-                        />
-                        <span>Увлечения</span>
-                      </div>
-                      <div class="mentors-card-item__text">
-                        <p>
-                          Научный подход к развитию человека в целом и
-                          предпринимателя в частности, выезды на природу,
-                          системный бег для здоровья.
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                  <div class="mentors-card__mobile">
-                    <div class="mentors-card__mobile-text">
-                      <p>
-                        <span class="block">Основные виды деятельности:</span>
-                        Переработка мусора, бурение спец-установками,
-                        квест-комнаты, коммерческая недвижимость.
-                      </p>
-                      <p><span>Годовой оборот:</span> 1,5 млрд. руб.</p>
-                      <p><span>Количество сотрудников:</span>200+.</p>
-                      <p>
-                        <span> Увлечения: </span>Развитие предпринимателей,
-                        публичные выступления, здоровый образ жизни, системность
-                        во всех сферах.
-                      </p>
-                    </div>
-                  </div>
-
                   <a class="mentors-card__btn btn" href="#">Подробнее</a>
                 </div>
               </article>
@@ -1028,26 +932,35 @@
   <div class="container">
     <h2 class="values__title">Ценности</h2>
     <ul class="values__list">
-      <li class="values__item">
+      <li
+        class="values__item"
+        data-ftext="Выполнение человеком ежедневно повторяющихся действий, которые приводят к какому-либо результату: в сфере здоровья и бизнеса, в жизни."
+      >
         <img
           class="values__img"
-          src="img/values/1.png"
+          src="images/content/values/1.png"
           alt="Ценности"
         />
         <p>Системность</p>
       </li>
-      <li class="values__item">
+      <li
+        class="values__item"
+        data-ftext="Быть честным с самим собой и с людьми вокруг, не казаться лучше, чем ты есть на самом деле."
+      >
         <img
           class="values__img"
-          src="img/values/2.png"
+          src="images/content/values/2.png"
           alt="Честность"
         />
         <p>Честность</p>
       </li>
-      <li class="values__item">
+      <li
+        class="values__item"
+        data-ftext="Выполнение поставленной задачи в срок"
+      >
         <img
           class="values__img"
-          src="img/values/3.png"
+          src="images/content/values/3.png"
           alt="Твердость
         сказал - сделал"
         />
@@ -1056,42 +969,54 @@
           сказал - сделал
         </p>
       </li>
-      <li class="values__item">
+      <li
+        class="values__item"
+        data-ftext="Добропорядочность – любые действия, совершенные от души, ради своего счастья и счастья других, формирование отношений на основе доверия и честности, постоянная забота о сохранении собственной чести."
+      >
         <img
           class="values__img"
-          src="img/values/4.png"
+          src="images/content/values/4.png"
           alt="Добропорядочность"
         />
         <p>Добропорядочность</p>
       </li>
-      <li class="values__item">
+      <li class="values__item" data-ftext="Умение мыслить и говорить цифрами">
         <img
           class="values__img"
-          src="img/values/5.png"
+          src="images/content/values/5.png"
           alt="Говорить фактами"
         />
         <p>Говорить фактами</p>
       </li>
-      <li class="values__item">
+      <li
+        class="values__item"
+        data-ftext="Желание передавать свои знания другим предпринимателям, и желание помогать людям: благотворительность, детские дома."
+      >
         <img
           class="values__img"
-          src="img/values/6.png"
+          src="images/content/values/6.png"
           alt="Желание помогать"
         />
         <p>Желание помогать</p>
       </li>
-      <li class="values__item">
+      <li
+        class="values__item"
+        data-ftext="Возможность делать свое окружение удобных и комфортным, для того чтобы каждый день чувствовать счастье."
+      >
         <img
           class="values__img"
-          src="img/values/7.png"
+          src="images/content/values/7.png"
           alt="Удобство жизни"
         />
         <p>Удобство жизни</p>
       </li>
-      <li class="values__item">
+      <li
+        class="values__item"
+        data-ftext="Соблюдение баланса во всех сферах жизни: в здоровье, в семье и с людьми вокруг."
+      >
         <img
           class="values__img"
-          src="img/values/8.png"
+          src="images/content/values/8.png"
           alt="Целостность"
         />
         <p>Целостность</p>
@@ -1146,7 +1071,7 @@
   <div class="container">
     <div class="calendar__wrapper">
       <div class="calendar__preview">
-        <img src="img/calendar.jpg" alt="calendar" />
+        <img src="images/content/calendar.jpg" alt="calendar" />
       </div>
       <div class="calendar__calendar">
         <h2 class="calendar__title">
@@ -1183,9 +1108,8 @@
           <div class="faqs-accordion__content accordion-content">
             <div class="faqs-accordion__text">
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown.
+                Резидентом клуба может стать тот, кто разделяет ценности и имеет
+                ежемесячный доход более 300 000 рублей.
               </p>
             </div>
           </div>
@@ -1197,35 +1121,21 @@
           <div class="faqs-accordion__content accordion-content">
             <div class="faqs-accordion__text">
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="faqs-accordion accordion">
-          <button class="faqs-accordion__control accordion-control">Сколько длятся встречи?</button>
-          <div class="faqs-accordion__content accordion-content">
-            <div class="faqs-accordion__text">
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown.
+                Встречи проходят по адресу метро Тульская , Павловская улица 18,
+                площадка Открытый мир или в новых локациях.
               </p>
             </div>
           </div>
         </div>
         <div class="faqs-accordion accordion">
           <button class="faqs-accordion__control accordion-control">
-            Сколько стоит вступить в клуб?
+            Сколько длятся встречи?
           </button>
           <div class="faqs-accordion__content accordion-content">
             <div class="faqs-accordion__text">
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown.
+                У нас разные мероприятия по формату и таймингу. В среднем 3
+                часа.
               </p>
             </div>
           </div>
@@ -1237,9 +1147,8 @@
           <div class="faqs-accordion__content accordion-content">
             <div class="faqs-accordion__text">
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown.
+                У нас есть пробные встречи , на которых Вы сможете понять
+                подходит ли Вам наш клуб.
               </p>
             </div>
           </div>
@@ -1247,7 +1156,7 @@
       </div>
 
       <div class="faqs__preview">
-        <img src="img/faqs.png" alt="faqs" />
+        <img src="images/content/faqs.png" alt="faqs" />
       </div>
     </div>
   </div>
@@ -1339,7 +1248,7 @@
   <div class="container">
     <div class="footer__top">
       <a class="footer__logo logo" href="#">
-        <img src="img/logo.png" alt="Логотип" />
+        <img src="images/logo.png" alt="Логотип" />
         <span>бизнес — клуб для предпринимателей</span>
       </a>
 
@@ -1377,7 +1286,7 @@
           href="https://razrabotka-saita.ru/"
           target="_blank"
         >
-          <img src="img/logo-company.png" alt="Адванс Медия" />
+          <img src="images/logo-company.png" alt="Адванс Медия" />
         </a>
       </div>
     </div>
