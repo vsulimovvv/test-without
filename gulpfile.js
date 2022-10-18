@@ -14,7 +14,7 @@ const del = require('del');
 
 // svgSprites
 function svgSprites() {
-  return src(['src/img/icons/*.svg'])
+  return src(['src/images/icons/*.svg'])
     .pipe(
       cheerio({
         run: function ($) {
@@ -38,7 +38,7 @@ function svgSprites() {
         },
       })
     )
-    .pipe(dest('src/img'));
+    .pipe(dest('src/images'));
 }
 
 function fileInclude() {
@@ -91,7 +91,7 @@ function scripts() {
 }
 
 function images() {
-  return src('src/img/**/*.*')
+  return src('src/images/**/*.*')
     .pipe(
       imagemin([
         imagemin.gifsicle({
@@ -116,7 +116,7 @@ function images() {
         }),
       ])
     )
-    .pipe(dest('app/img'));
+    .pipe(dest('app/images'));
 }
 
 function build() {
@@ -143,7 +143,7 @@ function watching() {
   watch(['src/js/**/*.js', '!src/js/main.min.js'], scripts);
   watch(['src/html/**/*.html'], fileInclude);
   watch(['src/**/*.html']).on('change', browserSync.reload);
-  watch(['src/img/icons/*.svg'], svgSprites);
+  watch(['src/images/icons/*.svg'], svgSprites);
 }
 
 exports.svgSprites = svgSprites;
